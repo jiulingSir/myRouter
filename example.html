@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+    <a href="#/">home</a>
+    <a href="#/foo">foo</a>
+    <a href="#/bar">bar</a>
+    <div id="router-view"></div>
+<script type="text/javascript" src="observer.js"></script>
+<script type="text/javascript" src="watcher.js"></script>
+<script type="text/javascript" src="base.js"></script> 
+<script type="text/javascript"> 
+new router({
+  id: 'router-view',
+  mode: 'hash',
+  routes: [
+    {
+      path: '/',
+      name: 'home',
+      component: '<div>Home</div>', 
+    },
+    {
+      path: '/bar',
+      name: 'bar',
+      component: '<div>Bar</div>', 
+    },
+    {
+      path: '/foo',
+      name: 'foo',
+      component: '<div>Foo</div>'
+    }
+  ]
+}); 
+</script>
+</body>
+</html>
